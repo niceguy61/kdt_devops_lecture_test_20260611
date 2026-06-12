@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seoul Stays & Days</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Seoul Stays & Days home">
+        <span class="brand-mark">S</span>
+        <span>Seoul Stays & Days</span>
+      </a>
+
+      <nav class="nav-tabs" aria-label="Trip styles">
+        <button class="nav-tab is-active" type="button">First Seoul</button>
+        <button class="nav-tab" type="button">Food Walks</button>
+        <button class="nav-tab" type="button">Night Views</button>
+      </nav>
+
+      <button class="menu-button" type="button" aria-label="Open menu">☰</button>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Made for Southeast Asian travelers</p>
+          <h1 id="page-title">Easy Seoul spots for your first 72 hours.</h1>
+          <p class="hero-text">
+            Pick friendly neighborhoods, halal-aware food notes, and transit-light plans using simple dummy data.
+          </p>
+        </div>
+
+        <form class="search-pill" id="trip-search">
+          <label>
+            <span>Area</span>
+            <select id="area-filter" name="area">
+              <option value="all">All Seoul</option>
+            </select>
+          </label>
+          <label>
+            <span>Mood</span>
+            <select id="mood-filter" name="mood">
+              <option value="all">Any mood</option>
+            </select>
+          </label>
+          <label>
+            <span>Budget</span>
+            <select id="budget-filter" name="budget">
+              <option value="all">Any budget</option>
+            </select>
+          </label>
+          <button class="search-button" type="submit" aria-label="Search places">⌕</button>
+        </form>
+      </section>
+
+      <section class="content-grid" aria-label="Seoul recommendations">
+        <aside class="trip-panel">
+          <div>
+            <p class="panel-label">Starter route</p>
+            <h2>Soft landing day</h2>
+            <p>
+              Morning palace walk, afternoon shopping street, and a sunset river stop. Built for low friction after a flight.
+            </p>
+          </div>
+          <div class="route-list">
+            <span>09:30 Gyeongbokgung</span>
+            <span>13:00 Myeongdong</span>
+            <span>18:30 Banpo Bridge</span>
+          </div>
+        </aside>
+
+        <div class="places-wrap">
+          <div class="section-head">
+            <div>
+              <p class="panel-label">Recommended places</p>
+              <h2 id="result-count">6 Seoul picks</h2>
+            </div>
+            <button class="clear-button" id="clear-filters" type="button">Reset</button>
+          </div>
+
+          <div class="place-grid" id="place-grid"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
